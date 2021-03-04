@@ -1,9 +1,7 @@
-import { useState, useEffect, useContext } from 'react'
-import { ChallengesContext } from '../contexts/ChallengesContext'
+import { useContext } from 'react'
 import { CountdownContext } from '../contexts/CountdownContext'
 
 import styles from '../styles/components/Countdown.module.css'
-
 
 export function Countdown() {
 
@@ -21,7 +19,6 @@ export function Countdown() {
   // quando o minute não tiver dois digitos, ex: 5 minutes, o padStart acrescenta um 0 na primeira posição ['0','5'] 
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('')
   const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('')
-
 
   return (
     <div>
@@ -68,13 +65,7 @@ export function Countdown() {
           </>
         )}
 
-
-
-
-
-
-
     </div>
   )
-  //Verificar se o isActive esta ativo e mudar mensagem button
+
 }
